@@ -3,6 +3,7 @@ require 'housing/helper'
 require 'housing/air_conditioner'
 require 'housing/light'
 require 'housing/door_lock'
+require 'housing/shutter'
 require 'net/http'
 require 'uri'
 require 'oga'
@@ -34,6 +35,12 @@ module Housing
       url = @api_ip + SMART_HOME
       door_lock = Housing::DoorLock.new(url: url)
       door_lock
+    end
+
+    def shutter
+      url = @api_ip + SMART_HOME
+      shutter = Housing::Shutter.new(url: url)
+      shutter
     end
   end
 end

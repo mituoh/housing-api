@@ -49,4 +49,16 @@ describe Housing::API do
       expect(subject.status).to eq('CLOSE')
     end
   end
+
+  describe 'Shutter' do
+    subject { housing.shutter }
+    it 'Set OPEN' do
+      subject.open!
+      expect(subject.status).to eq('OPEN')
+    end
+    it 'Set CLOSE' do
+      subject.close!
+      expect(subject.status).to eq('CLOSE')
+    end
+  end
 end
