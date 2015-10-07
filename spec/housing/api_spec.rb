@@ -37,4 +37,16 @@ describe Housing::API do
       expect(subject.status).to eq('OFF')
     end
   end
+
+  describe 'Door Lock' do
+    subject { housing.door_lock }
+    it 'Set OPEN' do
+      subject.on!
+      expect(subject.status).to eq('OPEN')
+    end
+    it 'Set CLOSE' do
+      subject.off!
+      expect(subject.status).to eq('CLOSE')
+    end
+  end
 end
