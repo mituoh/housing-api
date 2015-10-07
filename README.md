@@ -57,6 +57,13 @@ shutter.close!
 puts shutter.status #=> CLOSE
 shutter.open!
 puts shutter.status #=> OPEN
+
+# Window
+window = housing.window
+window.open!
+puts window.status #=> OPEN
+window.close!
+puts window.status #=> CLOSE
 ```
 
 ## Development
