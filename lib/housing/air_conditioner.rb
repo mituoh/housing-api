@@ -39,5 +39,12 @@ module Housing
       req = @api_url + '&type=set&key=temperature&value=' + temperature.to_s
       Net::HTTP.get URI(req)
     end
+
+    def indoor_temperature
+      req = @api_url + '&type=get&key=indoorTemperature'
+      res = Net::HTTP.get URI(req)
+      body = Oga.parse_xml res
+      body.xpath('//data/value').map(&:text).first
+    end
   end
 end

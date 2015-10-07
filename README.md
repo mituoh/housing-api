@@ -1,4 +1,4 @@
-# Housing::Api
+# Housing::API
 
 Daiwa house housing api controller for Ruby.
 
@@ -34,8 +34,8 @@ puts ac.status  #=> ON
 
 ac.set_temperature 24
 puts ac.get_temperature #=> 24
-ac.set_temperature 17
-puts ac.get_temperature #=> 17
+
+puts ac.indoor_temperature #=> 18
 ```
 
 ## Development

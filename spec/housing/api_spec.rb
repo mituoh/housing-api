@@ -21,5 +21,8 @@ describe Housing::API do
       subject.set_temperature 27
       expect(subject.get_temperature).to eq('27')
     end
+    it 'Get indoor temperature' do
+      expect(subject.indoor_temperature).to eq('18')
+    end
   end
 end
