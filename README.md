@@ -41,6 +41,22 @@ puts ac.indoor_temperature #=> 18
 light = housing.light
 light.on!
 puts light.status #=> ON
+light.off!
+puts light.status #=> OFF
+
+# Door Lock
+door_lock = housing.door_lock
+door_lock.open!
+puts door_lock.status #=> OPEN
+door_lock.close!
+puts door_lock.status #=> CLOSE
+
+# Shutter
+shutter = housing.shutter
+shutter.close!
+puts shutter.status #=> CLOSE
+shutter.open!
+puts shutter.status #=> OPEN
 ```
 
 ## Development
