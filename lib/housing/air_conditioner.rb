@@ -18,12 +18,12 @@ module Housing
       body.xpath('//data/value').map(&:text).first
     end
 
-    def on
+    def on!
       req = @api_url + '&type=set&key=operationStatus&value=ON'
       Net::HTTP.get URI(req)
     end
 
-    def off
+    def off!
       req = @api_url + '&type=set&key=operationStatus&value=OFF'
       Net::HTTP.get URI(req)
     end

@@ -10,11 +10,11 @@ describe Housing::API do
   describe 'Air conditioner' do
     subject { housing.air_conditioner }
     it 'Status ON' do
-      subject.on
+      subject.on!
       expect(subject.status).to eq('ON')
     end
     it 'Status OFF' do
-      subject.off
+      subject.off!
       expect(subject.status).to eq('OFF')
     end
     it 'Set 27℃' do

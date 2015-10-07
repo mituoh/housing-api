@@ -7,7 +7,7 @@ Daiwa house housing api controller for Ruby.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'housing-api'
+gem 'housing-api', github: "mituoh/housing-api"
 ```
 
 And then execute:
@@ -28,9 +28,17 @@ require 'housing'
 
 ```ruby
 # You must create API Client at first.
-housing = Housing::Api.new({
+housing = Housing::Api.new(
   :api_ip => <your simulator ip address and port>
-})
+)
+
+# AirConditioner
+ac = housing.air_conditioner
+ac.status   # => ON or OFF
+ac.on!
+ac.off!
+ac.set_temperature 27
+ac.get_temperature  # => 27
 ```
 
 ## Development
