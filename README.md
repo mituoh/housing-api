@@ -36,6 +36,11 @@ ac.set_temperature 24
 puts ac.get_temperature #=> 24
 
 puts ac.indoor_temperature #=> 18
+
+# LED Light
+light = housing.light
+light.on!
+puts light.status #=> ON
 ```
 
 ## Development
