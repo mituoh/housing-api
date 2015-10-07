@@ -20,12 +20,12 @@ module Housing
       return 'CLOSE' if code == 'OFF'
     end
 
-    def on!
+    def open!
       req = @api_url + '&type=set&key=operationStatus&value=ON'
       Net::HTTP.get URI(req)
     end
 
-    def off!
+    def close!
       req = @api_url + '&type=set&key=operationStatus&value=OFF'
       Net::HTTP.get URI(req)
     end

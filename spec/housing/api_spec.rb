@@ -41,11 +41,11 @@ describe Housing::API do
   describe 'Door Lock' do
     subject { housing.door_lock }
     it 'Set OPEN' do
-      subject.on!
+      subject.open!
       expect(subject.status).to eq('OPEN')
     end
     it 'Set CLOSE' do
-      subject.off!
+      subject.close!
       expect(subject.status).to eq('CLOSE')
     end
   end
