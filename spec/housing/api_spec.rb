@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Housing::API do
-  let(:housing) { Housing::API.new(api_ip: 'http://192.168.129.40:1024') }
+  let(:housing) { Housing::API.new(api_ip: 'http://192.168.1.33:1024') }
 
   it 'has a version number' do
     expect(Housing::Api::VERSION).not_to be nil
